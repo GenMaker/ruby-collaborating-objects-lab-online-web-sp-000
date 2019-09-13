@@ -31,6 +31,6 @@ class Artist
   end
 
   def print_songs
-   self.songs.each {|song| puts song.name}
+   self.songs.each {|song| puts song.name} #the self at the beginning is derived from the Songs class via the song method so now we can iterate through it like any instance.
   end
 end
