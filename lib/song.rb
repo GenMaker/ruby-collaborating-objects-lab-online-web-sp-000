@@ -24,10 +24,10 @@ class Song
 
 
   def artist_name=(name)
-    if 
+    if (self.artist.nil?)
       self.artist = Artist.new(name)
     else
-      self.artist.name= name
+      self.artist.name = name
     end
   end
 end
