@@ -10,9 +10,8 @@ class MP3Importer
   def files
     basedir = '.'
     files = Dir.glob("*.mp3")
-    binding.pry
   end
-
+binding.pry
   def import
   end
 
