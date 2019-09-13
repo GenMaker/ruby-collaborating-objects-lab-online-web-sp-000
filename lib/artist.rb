@@ -14,16 +14,15 @@ class Artist
   end
 
   def songs
-
     Song.all.select {|song| song.artist == self}
   end
 
   def self.find_or_create_by_name(name)
-    if (self.artist.nil?)
-        self.name = Artist.new(name)
+     find_artist= self.all.find {|artist| artist.name == name}
+      if find_artist #returns true
+        find_artist
     else
-        self.artist.name = name
-        binding.pry
+        Artist.new(name)
     end
   end
 
